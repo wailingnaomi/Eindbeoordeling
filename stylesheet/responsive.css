@@ -1,0 +1,29 @@
+*{
+  box-sizing: border-box;
+}
+
+
+/* ---- Iphone ---- */
+@media screen and (max-width: 666px){
+  .menuItem, .search{
+    display: none;
+  }
+
+  #homeLogo, .foodtruck{
+    margin: 0 auto;
+  }
+
+  .hamburger{
+    display: inline;
+    margin-top: .5em;
+  }
+
+  .line1, .line2, .line3{
+    width: 1.75em;
+    height: .2em;
+    background-color: #5fc8bb;
+    margin-top: .5em;
+    transition: 0.4s;
+  }
+
+}

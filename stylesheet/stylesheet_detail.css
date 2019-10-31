@@ -1,0 +1,321 @@
+*{
+  box-sizing: border-box;
+}
+
+/* Bron voor webfont:
+• https://blog.logrocket.com/how-to-use-web-fonts-in-css-a0326f4d6a4d/*/
+@font-face{
+  font-family: 'brainflower';
+
+  src: url(fonts/brain_flower_euro-webfont.woff) format('woff'),
+  url(fonts/brain_flower_euro-webfont.woff2), format('woff2');
+}
+
+body{
+  font-family: 'brainflower', sans-serif;
+}
+
+#homeLogo{
+  height: 6vw;
+  min-height: 50px;
+  margin: 0 10vh 0 0;
+  padding: 0;
+  transform: scaleX(-1);
+}
+
+.menuBar{
+  padding: 0 5em;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu{
+  padding-top: 1.5em;
+  display: inline;
+  position: relative;
+}
+
+.menuItem{
+  text-decoration: none;
+  background-color: #fff;
+  color: #5fc8bb;
+  margin: 0 5vh;
+  padding: 0.5em 0.5em;
+  font-size: 3vmax;
+}
+
+/* menu hover animation:
+•https://codepen.io/jstn/pen/zuDst */
+.menuItem::after{
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #5fc8bb;
+  color: transparent;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.menuItem:hover:after{
+  width: 100%;
+  left: 0;
+}
+
+.search{
+  position: relative;
+  display: flex;
+}
+
+.searchTerm{
+  width: 2em;
+  font-family: 'brainflower', sans-serif;
+  font-size: 2vmax;
+  border: 1px solid #5fc8bb;
+  padding: 0.5em;
+  height: 1.5em;
+  border-radius: 5px;
+  color: #5fc8bb;
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+.searchTerm:focus{
+  width: 12em;
+}
+
+.searchIcon{
+  height: 1.5vw;
+  min-height: 12px;
+  margin: 2px 0 0 .5em;
+}
+
+button{
+  border-style: none;
+  color: white;
+  background-color: transparent;
+}
+
+/*drop down menu
+• https://codepen.io/shooft/pen/rEvdvP */
+.hamburger{
+  display: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.dropdown{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(-100%);
+}
+
+.dropdown.downGefallen{
+  transform: translateY(0);
+  transition: .75s;
+}
+
+.menuBar2{
+  margin-top: 0;
+  padding: 0 5em;
+  list-style-type: none;
+  background: linear-gradient(#5fc8bb, #fff);
+  width: 100%;
+  height: 100%;
+}
+
+.menu2{
+  padding-top: 1.5em;
+  position: relative;
+  text-align: center;
+}
+
+.menuItem2{
+  text-decoration: none;
+  background-color: transparent;
+  color: #fff;
+  padding: 0.5em 0.5em;
+  font-size: 3vmax;
+}
+
+.search2{
+  position: relative;
+}
+
+.searchTerm2{
+  width: 12em;
+  font-family: 'brainflower', sans-serif;
+  font-size: 2vmax;
+  border: 1px solid #5fc8bb;
+  padding: 0.5em;
+  height: 1.5em;
+  border-radius: 5px;
+  color: #5fc8bb;
+  background-color: transparent;
+  transition: 0.3s;
+  margin-left: auto;
+}
+
+.searchIcon2{
+  height: 1.5vw;
+  min-height: 12px;
+  margin: 2px 0 0 .5em;
+}
+
+button2{
+  border-style: none;
+  color: white;
+  background-color: transparent;
+}
+
+
+hr{
+  height: 0.1em;
+  border-style: none;
+  background-image: linear-gradient(90deg, #72f6ea, #9be193, #cfd363, #eebd4f, #ff002a);
+}
+
+.section{
+  display: flex;
+  justify-content: flex-start;
+  background-color: #5fc8bb;
+  color: transparent;
+  margin: 1.5em;
+  padding: 0 1em;
+}
+
+.title{
+  font-size: 2.5vmax;
+  font-weight: lighter;
+  margin: .5em auto .5em 0;
+  background-color: transparent;
+  color: white;
+}
+
+.detail{
+  margin-left: 1.5em;
+  display: flex;
+}
+
+.image{
+  display: block;
+  max-width: 50%;
+}
+
+
+.subtitle{
+  font-size: 5vmax;
+  width: 5em;
+  margin: 0 0 0 1em;
+  height: 1.5em;
+}
+
+.introduction{
+  display: block;
+  font-family: roboto;
+  margin: 0 0 0 2.3em;
+  width: 80%;
+
+}
+
+/*https://codepen.io/joostf/pen/VKyPxk?editors=1100*/
+.form{
+  display: flex;
+  flex-direction: column;
+  transition: all .5s;
+  padding: 0 1.5em;
+  background-color: HoneyDew;
+  margin: 1.5em 1.5em 0 1.5em;
+}
+
+.form:invalid{
+  background: rgba(255,0,0,0.1);
+  /background: rgba(255,0,0,.8);;
+
+}
+
+fieldset{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1em;
+  border: none;
+  transition: all .2s;
+  padding: 1em;
+  background-color: #9be193;
+}
+
+fieldset:invalid{
+  background: rgba(255,0,0,.1);
+}
+
+legend{
+  font-weight: bold;
+  font-size: 5vmax;
+}
+
+.label{
+  font-size: 3vmax;
+}
+
+.input{
+  border-color: #000;
+  padding: .25em;
+  font-size: 1em;
+  margin-bottom: 1em;
+  width: 100%;
+  transition: all 2s;
+  z-index: 2;
+}
+
+.input:valid, textarea:valid{
+  border-color: green;
+}
+
+.input:invalid, textarea:invalid{
+  border-color: mediumvioletred;
+  background-color: lightpink;
+}
+
+.input:focus, textarea:focus{
+  transition: scale(1.01, 1.01);
+}
+
+.input:disabled, textarea:disabled{
+  border-color: #eee;
+  background-color: #f9f9f9;
+}
+.input::placeholder{
+  color: rgba(0,0,0,.25);
+  font-style: italic;
+}
+
+textarea{
+  width: 100%;
+  border-color: #000;
+  transition: all 2s;
+}
+
+.button{
+  font-family: 'brainflower';
+  font-weight: bolder;
+  font-size: 3vmax;
+  flex: 0 0 2em;
+  transition: all .2s 1s;
+  opacity: 0;
+  width: 6em;
+  color: green;
+  width: 100%;
+  cursor: pointer;
+}
+
+.form:valid .button{
+  opacity: 1;
+}
+
+.button:focus{
+  transform: scale(1.1, 1.1);
+}
