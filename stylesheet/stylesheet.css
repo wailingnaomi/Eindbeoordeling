@@ -1,14 +1,21 @@
-*{
-  box-sizing: border-box;
-}
-
-/* Bron voor webfont:
-• https://blog.logrocket.com/how-to-use-web-fonts-in-css-a0326f4d6a4d/*/
 @font-face{
   font-family: 'brainflower';
 
-  src: url(fonts/brain_flower_euro-webfont.woff) format('woff'),
-  url(fonts/brain_flower_euro-webfont.woff2), format('woff2');
+  src: url('../fonts/brain_flower_euro-webfont.woff') format('woff'),
+    url('../fonts/brain_flower_euro-webfont.woff2') format('woff2'),
+    url('../fonts/brain_flower_euro-webfont.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: 'robotolight';
+  
+  src: url('../fonts/roboto-light.woff2') format('woff2'),
+    url('../fonts/roboto-light.woff') format('woff'),
+    url('../fonts/Roboto-Light.ttf') format('truetype');
+}
+
+*{
+  box-sizing: border-box;
 }
 
 body{
